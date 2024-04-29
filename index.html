@@ -2,10 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Redirecting to About Page</title>
+    <title>Redirecting...</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #6a737d;
+        }
+        p {
+            margin: 10px 0;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: auto;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .countdown {
+            font-weight: bold;
+            color: #d73a49;
+        }
+    </style>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            var counter = 10; // Set redirect countdown in seconds
+            var counter = 7; // Redirect countdown in seconds
             var countdown = document.getElementById('countdown');
 
             var interval = setInterval(() => {
@@ -20,11 +54,12 @@
     </script>
 </head>
 <body>
-    <h1>Hello, there!</h1>
-    <p> Thank you for visiting this page. There's nothing to see here.</p>
-    <p>Redirecting you to my about page in <span id="countdown">5</span> seconds...</p>
-    <p>If you are not redirected, <a href="https://rbnhd.github.io/about/">click here</a>.</p>
-    <p>View on GitHub</p>
-    <p><a href="https://github.com/rbnhd/rbnhd.github.io">GitHub Repository</a></p>
+    <div class="container">
+        <h1>Hello, there!</h1>
+        <p>Thank you for visiting this page. There's nothing to see here.</p>
+        <p>Redirecting you to about me page in <span class="countdown" id="countdown">8</span> seconds...</p>
+        <p>If you are not redirected, <a href="https://rbnhd.github.io/about/">click here</a>.</p>
+        <p><a href="https://github.com/rbnhd/rbnhd.github.io">View on GitHub</a></p>
+    </div>
 </body>
 </html>
