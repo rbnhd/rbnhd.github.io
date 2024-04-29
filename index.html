@@ -2,10 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=https://rbnhd.github.io/about/">
-    <title>Hi there! Redirecting to my "about" page...</title>
+    <title>Redirecting to About Page</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var counter = 10; // Set redirect countdown in seconds
+            var countdown = document.getElementById('countdown');
+
+            var interval = setInterval(() => {
+                counter--;
+                countdown.textContent = counter;
+                if (counter <= 0) {
+                    clearInterval(interval);
+                    window.location.href = 'https://rbnhd.github.io/about/'; // Redirect URL
+                }
+            }, 1000);
+        });
+    </script>
 </head>
 <body>
+    <h1>Hello, there!</h1>
+    <p> Thank you for visiting this page. There's nothing to see here.</p>
+    <p>Redirecting you to my about page in <span id="countdown">5</span> seconds...</p>
     <p>If you are not redirected, <a href="https://rbnhd.github.io/about/">click here</a>.</p>
+    <p>View on GitHub</p>
+    <p><a href="https://github.com/rbnhd/rbnhd.github.io">GitHub Repository</a></p>
 </body>
 </html>
