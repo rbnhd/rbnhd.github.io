@@ -6,40 +6,46 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
+            background-color: #121212; /* Dark background */
+            color: #ffffff;
             text-align: center;
             padding-top: 50px;
+            margin: 0;
         }
         h1 {
-            color: #6a737d;
+            color: #ffffff;
         }
         p {
             margin: 10px 0;
+            color: #bbbbbb; /* Lighter text color */
+        }
+        p.redirect-message {
+            color: #ffffff;
+            font-weight: bold;
         }
         a {
-            color: #0366d6;
+            color: #1f6feb; /* GitHub's link color */
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
         .container {
-            background-color: #fff;
+            background-color: #222; /* Dark container */
             padding: 20px;
             border-radius: 8px;
             display: inline-block;
             margin: auto;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(255,255,255,0.1);
         }
         .countdown {
             font-weight: bold;
-            color: #d73a49;
+            color: #4caf50; /* Green color for countdown */
         }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            var counter = 7; // Redirect countdown in seconds
+            var counter = 8; // Redirect countdown in seconds
             var countdown = document.getElementById('countdown');
 
             var interval = setInterval(() => {
@@ -57,7 +63,7 @@
     <div class="container">
         <h1>Hello, there!</h1>
         <p>Thank you for visiting this page. There's nothing to see here.</p>
-        <p>Redirecting you to about me page in <span class="countdown" id="countdown">8</span> seconds...</p>
+        <p class="redirect-message">Redirecting you to my about page in <span class="countdown" id="countdown">1</span> second...</p>
         <p>If you are not redirected, <a href="https://rbnhd.github.io/about/">click here</a>.</p>
         <p><a href="https://github.com/rbnhd/rbnhd.github.io">View on GitHub</a></p>
     </div>
